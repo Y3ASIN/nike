@@ -1,8 +1,12 @@
+import { useState } from "react";
+
 import { headerLogo } from "../assets/images";
-import { hamburger } from "../assets/icons";
+import { close, hamburger } from "../assets/icons";
 import { navLinks } from "../constants";
 
 const Nav = () => {
+  const [toggle, setToggle] = useState(false);
+
   return (
     <header className="padding-x py-8 absolute z-10 w-full">
       <nav className="flex justify-between items-center max-container">
@@ -22,7 +26,33 @@ const Nav = () => {
           ))}
         </ul>
         <div className="hidden max-lg:block">
-          <img src={hamburger} alt="Hamburger" width={25} height={25} />
+          <img
+            src={toggle ? close : hamburger}
+            alt="Hamburger"
+            width={25}
+            height={25}
+            className="cursor-pointer object-contain"
+            onClick={() => setToggle(!toggle)}
+          />
+
+          <div
+            className={`${
+              !toggle ? "hidden" : "flex"
+            } p-6 orange-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+          >
+            <ul className="list-none flex flex-col gap-4 justify-end items-start">
+              {navLinks.map((link, i) => (
+                <li key={i} className="hover:">
+                  <a
+                    href={link.href}
+                    className="font-montserrat text-md leading-normal text-black"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
