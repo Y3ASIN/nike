@@ -23,7 +23,10 @@ pnpm dev
 # or
 bun dev
 ```
-Live: [Nike Landing Page](nike-webap.vercel.app)
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+### Live : [Nike Landing Page](nike-webap.vercel.app)
+
 <hr>
 
 ![alt text](https://github.com/Y3ASIN/readme-edit-files/blob/main/nike/home.png 'Nike Home')
