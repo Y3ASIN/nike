@@ -8,8 +8,22 @@ Utilizing the full potential of Tailwind CSS, I have designed a high-quality, re
 
 ## Tech Used
 - React JS
-- Tawilwind CSS 
+- Tawilwind CSS
 
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+Live: [Nike Landing Page](nike-webap.vercel.app)
 <hr>
 
 ![alt text](https://github.com/Y3ASIN/readme-edit-files/blob/main/nike/home.png 'Nike Home')
